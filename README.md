@@ -23,7 +23,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ---
 
-## Setup the Environment
+### Setup the Environment
 
 * Create a virtualenv and activate it
 * Run `make install` to install the necessary dependencies
@@ -40,3 +40,20 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+---
+
+### Files
+* `app.py` - The python application that returns predictions
+* `Dockerfile` - `Dockerfile` used to build Docker image
+* `Makefile` - Provides sets of instructions to be run with the `make` command
+* `make_prediction.sh` - Script to quickly post data to the application
+* `model_data/` - Provided with the project. Training data?
+* `output_text_files/` - Output examples
+  * `docker_out.txt` - Sample output from application running in Docker
+  * `kubernetes_out.txt` - Sample Kubernetes output
+* `README.md` - This file
+* `requirements.txt` - A list of Python dependencies to be installed using `make install`
+* `run_docker.sh` - Script to run the application locally in Docker
+* `run_kubernetes.sh` - Script to run the application in a Minikube deployment
+* `upload_docker.sh` - Script to upload Docker container to Docker Hub (must be run after `run_docker.sh`
