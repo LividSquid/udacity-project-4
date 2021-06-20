@@ -28,7 +28,10 @@ while [ $count -le 12 ]; do
     printf "\n"
     count=$((count+1))
 done
+kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward deployment/project-4 8000:80
+kubectl port-forward deployment/project-4 8000:80 &
+
+kubectl logs -f deployment/project-4
